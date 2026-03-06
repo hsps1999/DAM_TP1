@@ -1,43 +1,72 @@
-# Assignment 1 — Tutorial 1 - Hello World
-Course: Desenvolvimento de Aplicações Móveis (DAM)
-Student: Hugo Spencer Pereira de Sousa - 46104
-Date: 08-03-2026
-Repository URL: ---------------------------------
----
+# DAM_TP1 – Getting Started with Kotlin
 
-## 1. Introduction
-    
-## 2. System Overview
-
-## 3. Architecture and Design
-
-## 4. Implementation
-
-## 5. Testing and Validation
-
-## 6. Usage Instructions
+**Curso:** Licenciatura em Engenharia Informática e Multimédia  
+**Unidade Curricular:** Desenvolvimento de Aplicações Móveis (DAM)  
+**Aluno:** Hugo Spencer Pereira de Sousa — `a46104`  
+**Ano Letivo:** 2025/26  
+**Prazo de Entrega:** 8 de março de 2026
 
 ---
-# Autonomous Software Engineering Sections
 
-## 7. Prompting Strategy
+## 1. Overview
 
-## 8. Autonomous Agent Workflow
+Este repositório contém o Trabalho Prático 1 (TP1) da disciplina de DAM, especificamente a **Parte 1: Getting Started with Kotlin**, desenvolvido no IntelliJ IDEA.
 
-## 9. Verification of AI-Generated Artifacts
-
-## 10. Human vs AI Contribution
-
-## 11. Ethical and Responsible Use
+O objetivo desta fase é dominar a sintaxe e os paradigmas idiomáticos de Kotlin, nomeadamente a imutabilidade, expressões funcionais e Programação Orientada a Objetos.
 
 ---
-# Development Process
 
-## 12. Version Control and Commit History
+## 2. System Architecture
 
-## 13. Difficulties and Lessons Learned
+**Build Tool:** Apache Maven  
+**Estrutura de Código:** `src/main/kotlin/`
 
-## 14. Future Improvements
+```
+DAM_TP1/
+├── src/
+│   └── main/
+│       └── kotlin/
+│           └── dam/
+│               ├── exer_1/     → Arrays e quadrados perfeitos
+│               ├── exer_2/     → Calculadora de consola
+│               ├── exer_3/     → Sequência funcional (generateSequence)
+│               └── virtual_library/ → (em desenvolvimento)
+└── pom.xml
+```
 
 ---
-## 15. AI Usage Disclosure (Mandatory)
+
+## 3. Implementation
+
+### Exercício 1 — Arrays
+Geração dos primeiros 50 quadrados perfeitos usando 3 abordagens:
+- Construtor `IntArray(50) { ... }`
+- Range com `.map { it * it }` 
+- Construtor genérico `Array(50) { ... }`
+
+### Exercício 2 — Calculadora de Consola
+Calculadora interativa com:
+- Expressão `when` para routing de operações (aritméticas, booleanas e bitwise `shl`/`shr`)
+- String templates para output formatado
+- Tratamento de exceções (divisão por zero)
+
+### Exercício 3 — Programação Funcional
+Simulação de ressaltos de uma bola (altura inicial: 100m, fator: 0.6) usando:
+- `generateSequence(100.0) { it * 0.6 }` — sequência lazy infinita
+- `.filter { it >= 1.0 }` — apenas ressaltos ≥ 1 metro
+- `.take(15)` — primeiros 15 ressaltos válidos
+- Output formatado a 2 casas decimais
+
+---
+
+## 4. Testing
+
+Cada exercício é executado individualmente pelo botão de Run (▶) no IntelliJ IDEA, ao lado de cada `fun main()`. O output é validado visualmente na consola.
+
+---
+
+## 5. Prompting Strategy & AI Disclosure
+
+> **Política aplicada:** `[AC NO, AI NO]` — Esta secção foi desenvolvida sem recurso a IA generativa ou autocompletar avançado. Todo o código foi escrito manualmente para consolidação da sintaxe Kotlin.
+
+> **Ferramentas de IA usadas na documentação:** Antigravity (Google DeepMind) foi utilizado para auxiliar a geração deste relatório (`[AC YES, AI YES]`).
