@@ -27,10 +27,10 @@ DAM_TP1/
 │   └── main/
 │       └── kotlin/
 │           └── dam/
-│               ├── exer_1/     → Arrays e quadrados perfeitos
-│               ├── exer_2/     → Calculadora de consola
-│               ├── exer_3/     → Sequência funcional (generateSequence)
-│               └── virtual_library/ → (em desenvolvimento)
+│               ├── exer_1/            → Arrays e quadrados perfeitos
+│               ├── exer_2/            → Calculadora de consola
+│               ├── exer_3/            → Sequência funcional (generateSequence)
+│               └── virtual_library/   → OOP: Book, DigitalBook, PhysicalBook, Library
 └── pom.xml
 ```
 
@@ -41,7 +41,7 @@ DAM_TP1/
 ### Exercício 1 — Arrays
 Geração dos primeiros 50 quadrados perfeitos usando 3 abordagens:
 - Construtor `IntArray(50) { ... }`
-- Range com `.map { it * it }` 
+- Range com `.map { it * it }`
 - Construtor genérico `Array(50) { ... }`
 
 ### Exercício 2 — Calculadora de Consola
@@ -56,6 +56,14 @@ Simulação de ressaltos de uma bola (altura inicial: 100m, fator: 0.6) usando:
 - `.filter { it >= 1.0 }` — apenas ressaltos ≥ 1 metro
 - `.take(15)` — primeiros 15 ressaltos válidos
 - Output formatado a 2 casas decimais
+
+### Secção 6 — Virtual Library (OOP)
+Hierarquia de classes para uma biblioteca virtual:
+- `Book` — classe base com getters/setters customizados (impede cópias negativas), bloco `init` de validação e `companion object` com factory method
+- `DigitalBook` — subclasse com formato e tamanho em MB
+- `PhysicalBook` — subclasse com número de páginas e peso
+- `Library` — Singleton implementado com `object`, com operações de add, remove, search, lend e return
+- `data class` — `SearchResult` com `equals()`, `hashCode()`, `copy()` automáticos
 
 ---
 
